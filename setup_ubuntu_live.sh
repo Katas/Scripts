@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# A simple script to set up ubuntu live.
+# Sometimes I only have a laptop with no HDD, and I want to work somewhere other than on my desktop.
+# This script will add the necessary repositories, update the system, and install some utilities and remote access tools.
+
 if ! ping ubuntu.com -c 1 > /dev/null 2>&1; then
 	echo "Failed to ping ubuntu.com." >&2
 	echo "A network connection is required to set up Ubuntu livecd." >&2
@@ -18,7 +22,7 @@ sudo apt-get --yes update
 sudo apt-get --yes upgrade
 
 # install vim, git, vnc
-echo "Installing vim, git, and vnc "
+echo "Installing vim, git, and vnc"
 sudo apt-get --yes install vim
 sudo apt-get --yes install git
 sudo apt-get --yes install tigervnc-viewer
