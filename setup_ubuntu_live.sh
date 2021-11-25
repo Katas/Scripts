@@ -3,6 +3,7 @@
 # A simple script to set up ubuntu live.
 # Sometimes I only have a laptop with no HDD, and I want to work somewhere other than on my desktop.
 # This script will add the necessary repositories, update the system, and install some utilities and remote access tools.
+# The remote access tools can then be used to access my desktop from the laptop.
 
 if ! ping ubuntu.com -c 1 > /dev/null 2>&1; then
 	echo "Failed to ping ubuntu.com." >&2
@@ -28,6 +29,7 @@ sudo apt-get --yes install git
 sudo apt-get --yes install tigervnc-viewer
 
 # install TeamViewer (for work-related purposes)
+echo "Installing TeamViewer"
 tv_url='https://download.teamviewer.com/download/linux/teamviewer_amd64.deb'
 tv_loc="/tmp/teamviewer.deb"
 if ! wget "$tv_url" -O "$tv_loc" -q --show-progress; then
