@@ -16,7 +16,7 @@ fi
 
 tempdef="$tempdir/$searchterm"
 if [ -f "$tempdef" ]; then
-	definition=$(cat "$tempdef")
+	definition=$(<"$tempdef")
 else
 	definition=$(dict "$searchterm")
 	if [ "$?" -ne 0 ]; then
