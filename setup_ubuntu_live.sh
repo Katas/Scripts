@@ -41,3 +41,6 @@ fi
 sudo apt-get --yes install "$tv_loc"
 
 rm "$tv_loc"
+
+# enable the lock screen (off by default)
+gsettings set org.gnome.desktop.lockdown disable-lock-screen false
