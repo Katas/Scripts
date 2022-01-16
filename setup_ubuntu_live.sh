@@ -23,11 +23,12 @@ sudo apt-get --yes update
 sudo apt-get --yes upgrade
 
 # install vim, git, vnc
-echo "Installing vim, git, zathura, and vnc"
+echo "Installing vim, git, zathura, vnc, and sshfs"
 sudo apt-get --yes install vim
 sudo apt-get --yes install git
 sudo apt-get --yes install zathura
 sudo apt-get --yes install tigervnc-viewer
+sudo apt-get --yes install sshfs
 
 # install TeamViewer (for work-related purposes)
 echo "Installing TeamViewer"
